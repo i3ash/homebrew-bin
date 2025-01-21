@@ -1,7 +1,7 @@
 class Fortify < Formula
   desc "Command-line tool designed to enhance file security through encryption"
   homepage "https://github.com/i3ash/fortify"
-  version "1.0.15"
+  version "1.0.19"
   license "MIT"
 
   option "with-universal", "Install the universal binary"
@@ -9,21 +9,21 @@ class Fortify < Formula
   depends_on "go" => :build
 
   resource "source" do
-    url "https://github.com/i3ash/fortify/archive/refs/tags/v1.0.15.tar.gz"
-    sha256 "8dac6e60bff640287f4eb04e6f427fd856dabcb76cfc8dc7b504793d8b30305e"
+    url "https://github.com/i3ash/fortify/archive/refs/tags/v1.0.19.tar.gz"
+    sha256 "3eddbda824dbae8e857310177294de2c1766aa954cf549d8b6af952b64778439"
   end
 
   if build.with? "universal"
     url "https://github.com/i3ash/fortify/releases/download/v#{version}/fortify-darwin-universal"
-    sha256 "21d3e48a844dbb476f6979cce5efe91d354215b3ee805390bdce5fdde7d8f7c8"
+    sha256 "65a13b2365f236ee3fa45e1c0ba4eb05864f7e7e825173afe6bfbb24fcb9bdc9"
   else
     on_arm do
       url "https://github.com/i3ash/fortify/releases/download/v#{version}/fortify-darwin-arm64"
-      sha256 "533ceaa60d994e1e1eb980a6f2da0c1fb666c05e587256427a1a0049541fb248"
+      sha256 "a10748fabeb41cea462d801a239c99e3b156118053768ca07bf3bf0e91ee5317"
     end
     on_intel do
       url "https://github.com/i3ash/fortify/releases/download/v#{version}/fortify-darwin-x86_64"
-      sha256 "fd49fdfdd07765964f1acbc31de632613f746648a089bf8cf7ba3e54d466b5d3"
+      sha256 "82b66c82c0e5231825b8c57638abe7095b15a3b46441bfbf1d997cd752dae780"
     end
   end
 
