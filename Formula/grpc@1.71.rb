@@ -1,4 +1,4 @@
-class Grpc < Formula
+class GrpcAT171 < Formula
   desc "Next generation open source RPC library and framework"
   homepage "https://grpc.io/"
   url "https://github.com/grpc/grpc.git",
